@@ -1,0 +1,12 @@
+
+link:https://blog.miguelgrinberg.com/post/json-web-tokens-with-public-key-signatures
+
+go to 'C:\Program Files\Git\usr\bin'
+
+open the cmd as 'administrator' and go to above path
+
+--Otherwise install Git
+
+openssl genrsa -out jwt-key.private 4096
+
+openssl rsa -in jwt-key -pubout > jwt-key.pub

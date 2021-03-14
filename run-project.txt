@@ -1,0 +1,12 @@
+To run project:
+    
+    Get Oauth Credentials from google developer console and set 'http://localhost:3000/google/redirect/' as REDIRECT_URI.
+    Sign into MongoDB cluster,add user (for website to access database), add database and get Connection uri.
+    ex:mongodb+srv://<username>:<password>@ecommerce-app.2wwgm.mongodb.net/ecommerce-app?retryWrites=true&w=majority
+    Create private-public key pair for signing and verifying json web tokens.(paste both files in root project directory)
+    Set above values in '.env' file
+    
+    git clone .....
+    cd <project-directory>/ecommerce-server/
+    npm install
+    open: localhost:3000

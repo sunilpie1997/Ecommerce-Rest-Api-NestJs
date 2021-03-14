@@ -1,0 +1,17 @@
+    To create:
+
+    1.service -> nest g service cats
+    2.component -> nest g controller cats
+    3.module -> nest g module cats
+    
+    Each module in nestjs is singleton.
+
+
+
+    'Feature' module simply organizes code relevant
+    for a specific feature, keeping code organized and 
+    establishing clear boundaries.Ex:CatsModule
+
+    When using multiple databases:
+    https://docs.nestjs.com/techniques/database#multiple-databases
+
