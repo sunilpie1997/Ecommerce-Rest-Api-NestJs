@@ -59,6 +59,12 @@ export class RetailerService {
             new_retailer.email=email;
             new_retailer.first_name=user.first_name;
             new_retailer.last_name=user.last_name;
+            
+            if(!user.profile.contact_no)
+            {
+                throw new Error(RetailerErrors.CONTACT_NO_REQUIRED);
+            }
+
             new_retailer.contact_no=user.profile.contact_no;
         
 

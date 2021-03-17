@@ -51,9 +51,10 @@ export class ShopService {
 
     }
 
-
+    
     /* add transaction in future as both sides needs to be saved */
     /* used by retailer */
+    
     async addCategory(email:String,shop_id:String,category_name:String):Promise<String>
     {
         
@@ -72,7 +73,7 @@ export class ShopService {
             throw new Error(ShopModuleErrors.OWNERSHIP)
         }
         
-        /* checking if category exists */
+        // checking if category exists
 
         const categories:Map<String,String>=shop.categories;
 
@@ -81,7 +82,7 @@ export class ShopService {
             throw new Error(CategoryErrors.CATEGORY_EXIST);
         }
         
-        /* if category does not exist ,create one */
+        // if category does not exist ,create one
 
         const new_category:Category=new this.CategoryModel();
         
@@ -93,7 +94,7 @@ export class ShopService {
 
         //console.log("new category object created with shop property set");
 
-        /* add saved_category 'name' and 'ObjectId' to 'categories' map in 'shop' */
+        // add saved_category 'name' and 'ObjectId' to 'categories' map in 'shop'
         shop.categories.set(saved_category.category_name,saved_category._id);
 
         await shop.save();
@@ -108,6 +109,7 @@ export class ShopService {
         return CategorySuccess.CATEGORY_ADDED;
         
     }
+    
 
     /* functionality to add single product at once (limit is set for total products in on category) */
     async addProductByCategory(email:String,shop_id:String,category_id:String,product:AddProductDto):Promise<String>
