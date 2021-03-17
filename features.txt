@@ -1,2 +1,13 @@
 
 
+Authentication using google and redirect to home page on successfull login
+User can change his password
+User can register and view his profile and see which shops has granted him exclusive status.
+User can search shops by 'pincode' and browse products from shop by 'category' .
+Retailer can register and add shop.
+Shop can only sell if admin set 'can_sell' property of shop to 'True'.
+Shop can add categories and products in them (also set shop 'status' to 'offline'/'online'.
+Admin can do anything :)).
+
+Features you should implement:
+User can add to cart and buy products
