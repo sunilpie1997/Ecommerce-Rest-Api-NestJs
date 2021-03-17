@@ -14,7 +14,7 @@ import { AppService } from 'src/app.service';
 /************************************ MODULES IN THIS APP ***********************************************/
 
 import { RetailerModule } from 'src/retailer/retailer.module';
-// import { ShopModule } from 'src/shop/shop.module';
+import { ShopModule } from 'src/shop/shop.module';
 import { UserModule } from 'src/user/user.module';
 import { AuthModule } from 'src/auth/auth.module';
 
@@ -54,7 +54,7 @@ config();
     }),
 
     RetailerModule,
-    // ShopModule,
+    ShopModule,
     UserModule,
     AuthModule,
     // CloudMartModule,
