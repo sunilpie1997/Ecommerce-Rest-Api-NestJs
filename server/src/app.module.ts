@@ -19,7 +19,7 @@ import { UserModule } from 'src/user/user.module';
 import { AuthModule } from 'src/auth/auth.module';
 
 import { AdminModule } from 'src/admin/admin.module';
-// import { CloudMartModule } from 'src/cloud-mart/cloud-mart.module';
+import { CloudMartModule } from 'src/cloud-mart/cloud-mart.module';
 import { AllExceptionsFilter } from './exception-filters/all-exception.filter';
 
 import { APP_FILTER } from '@nestjs/core';
@@ -57,7 +57,7 @@ config();
     ShopModule,
     UserModule,
     AuthModule,
-    // CloudMartModule,
+    CloudMartModule,
     AdminModule,
    
   ],
