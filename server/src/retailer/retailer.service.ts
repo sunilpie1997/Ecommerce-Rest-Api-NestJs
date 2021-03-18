@@ -92,6 +92,8 @@ export class RetailerService {
         //set retailer for shop
         shop.retailer=retailer;
 
+        shop.save();
+
         return ShopSuccess.SUCCESSFULL_REGISTRATION;
 
 

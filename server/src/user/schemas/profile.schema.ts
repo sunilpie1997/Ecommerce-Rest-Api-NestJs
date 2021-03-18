@@ -18,7 +18,8 @@ export const profileSchema=new mongoose.Schema({
             type:String,
             required:false,
             maxlength:[AddressConstraints.AREA_MAXVALUE,AddressConstraints.AREA_MAXLENGTH],
-            default:null
+            default:null,
+            lowercase:true,
         },
 
         city:{
@@ -26,7 +27,8 @@ export const profileSchema=new mongoose.Schema({
             type:String,
             required:false,
             maxlength:[AddressConstraints.CITY_MAXVALUE,AddressConstraints.CITY_MAXLENGTH],
-            default:null
+            default:null,
+            lowercase:true,
         },
 
         state:{
@@ -34,7 +36,8 @@ export const profileSchema=new mongoose.Schema({
             type:String,
             required:false,
             maxlength:[AddressConstraints.STATE_MAXVALUE,AddressConstraints.STATE_MAXLENGTH],
-            default:null
+            default:null,
+            lowercase:true,
         },
 
         pincode:{

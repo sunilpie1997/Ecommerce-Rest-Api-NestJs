@@ -3,7 +3,7 @@ import {  Length, Matches } from "class-validator";
 export class CreateShopDto{
 
     //shop_name
-    @Matches(/^\w+( \w+)*$/,{message:'Enter valid shop name'})
+    @Matches(/^\w+( +\w+)*$/,{message:'Enter valid shop name'})
     @Length(3,50,{message:'shop name length should be between 3 and 50'})
     readonly shop_name:String;
 
@@ -13,7 +13,7 @@ export class CreateShopDto{
     readonly shop_email:String;
 
     //shop_type
-    @Matches(/^\w+( \w+)*$/,{message:'Enter valid shop type'})
+    @Matches(/^[a-zA-Z]+( +[a-zA-Z]+)*$/,{message:'Enter valid shop type'})
     @Length(3,50,{message:'shop type length should be between 3 and 50'})
     readonly shop_type:String;
 
@@ -22,17 +22,17 @@ export class CreateShopDto{
     readonly contact_no:String;
 
     //area
-    @Matches(/^\w+( \w+)*$/,{message:'Enter valid shop area'})
+    @Matches(/^\w+( +\w+)*$/,{message:'Enter valid shop area'})
     @Length(3,50,{message:'shop area length should be between 3 and 50'})
     readonly area:String;
 
     //city
-    @Matches(/^\w+( \w+)*$/,{message:'Enter valid shop city'})
+    @Matches(/^[a-zA-Z]+( +[a-zA-Z]+)*$/,{message:'Enter valid shop city'})
     @Length(3,50,{message:'shop city length should be between 3 and 50'})
     readonly city:String;
 
     //state
-    @Matches(/^\w+( \w+)*$/,{message:'Enter valid shop state'})
+    @Matches(/^[a-zA-Z]+( +[a-zA-Z]+)*$/,{message:'Enter valid shop state'})
     @Length(3,50,{message:'shop state length should be between 3 and 50'})
     readonly state:String;
 

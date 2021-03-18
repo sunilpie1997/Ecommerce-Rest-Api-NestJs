@@ -11,7 +11,7 @@ export class UpdateShopDetailsDto{
 
    
     //shop_type
-    @Matches(/^\w+( \w+)*$/,{message:'Enter valid shop type'})
+    @Matches(/^[a-zA-Z]+( +[a-zA-Z]+)*$/,{message:'Enter valid shop type'})
     @Length(3,50,{message:'shop type length should be between 3 and 50'})
     readonly shop_type:String;
 

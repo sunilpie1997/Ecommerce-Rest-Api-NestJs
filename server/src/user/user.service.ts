@@ -4,6 +4,8 @@ import { User } from 'src/user/interfaces/user';
 import { Model } from 'mongoose';
 import { UserErrors } from 'src/user/messages/user.errors';
 import { Profile } from 'src/user/interfaces/profile';
+import { UpdateUserDetailsDto } from './dto/update-user.dto';
+import { UserSuccess } from './messages/user.success';
 
 @Injectable()
 export class UserService {
@@ -58,4 +60,33 @@ export class UserService {
         return user;
     }
 
+    async updateUser(email:String,userDetails:UpdateUserDetailsDto):Promise<String>
+    {
+        const user:User=await this.findUser(email);
+        
+        if(userDetails.contact_no)
+        {
+            user.profile.contact_no=userDetails.contact_no;
+        }
+        if(userDetails.area)
+        {
+            user.profile.area=userDetails.area;
+        }
+        if(userDetails.city)
+        {
+            user.profile.city=userDetails.city;
+        }
+        if(userDetails.state)
+        {
+            user.profile.state=userDetails.state;
+        }
+        if(userDetails.pincode)
+        {
+            user.profile.pincode=userDetails.pincode;
+        }
+        
+        user.save();
+        return UserSuccess.PROFILE_UPDATED;
+
+    }
 }
